@@ -49,6 +49,9 @@
       addNumber('공백 포함: ', total);
       result.appendChild(document.createTextNode(' / '));
       addNumber('공백 제외: ', noSpace);
+      var words = text.split(/\s+/).filter(Boolean).length;
+      result.appendChild(document.createElement('br'));
+      result.appendChild(document.createTextNode('단어 수: ' + words + '개'));
     }
     document.getElementById('btn').addEventListener('click', update);
     document.getElementById('clear').addEventListener('click', function () {
